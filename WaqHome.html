@@ -1,0 +1,191 @@
+﻿<!DOCTYPE html>
+<!-- Waqq.ly Home Page -->
+<!-- ################# -->
+
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+ <!-- ? -->
+<head>
+    <meta charset="utf-8" /> <!-- ? -->
+    <title>Waqq.ly</title>
+
+    <!-- Styling Features -->
+    <!-- ================ -->
+    <style>
+
+        /* Styling Whole Website */
+        /* ---------------------- */
+        body {
+            background: black;
+        }
+
+        /* Styling Navigation Bar */
+        /* ---------------------- */
+        .navbar {
+            position: fixed; /* Sets Navigation bar to a fixed position */
+            top: 0; /* Sets Navigation bar position to the top of the page */
+            width: 100%; /* Sets Navigation bar to full width of page */
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5); /* Creates shadow under*/
+            z-index: 30; /* Specifying layer for navigation bar */
+        }
+
+            .navbar a {
+                float: left; /* Positions left tabs on navigation bar */
+                color: black; /* Sets navigation bar text color */
+                padding: 6px 16px; /* Gaps navigation bar tabs */
+                text-decoration: none; /* Removes navigation bar tabs' underline */
+            }
+
+        .navbarright a {
+            float: right; /* Positions right tabs on navigation bar */
+        }
+
+        .navbar a:hover {
+            background: rgba(255, 255, 255, 0.5); /* Changing navigation tab colour when mouse hovers over */
+        }
+
+        .main {
+            margin-top: 32px; /* Adds top margin to avoid content overlay */
+        }
+
+        /* Styling Header Section */
+        /* ---------------------- */
+        header {
+            text-align: center; /* Positioning text in center */
+            background-image: url("https://github.com/Uni-Winch-S-Knowles-24/Cloud-Full-Stack-Implementation-Waqq.ly-App-BS3928-Cloud-Computing-and-Infrastructure-/blob/main/Waqq-ly-Cover-Header-Image.jpg?raw=true"); /* Adding background image*/
+            background-size: 100%; /* Adjusiting background size */
+            background-repeat: no-repeat; /* stoping background image from repeating */
+        }
+
+        /* Styling How it Works Section */
+        /* ---------------------------- */
+        .howitworks {
+            display: inline-block;
+            text-align: center;
+            padding: 0px 30px 0px 30px;
+            margin-left: 90px;
+        }
+
+        /* Styling Happiness Section */
+        /* ---------------------------- */
+        .happiness {
+            display: inline-block;
+            text-align: center;
+            padding: 0px 30px 0px 30px;
+            margin-left: 100px;
+        }
+    </style>
+
+</head>
+
+<!-- Website Elements -->
+<!-- ================ -->
+<body>
+
+    <!-- Navigation Bar -->
+    <!-- -------------- -->
+    <div class="navbar" style="background: #21ef59;">
+        <!-- Home Tab -->
+        <a href="#home"><img src="https://github.com/Uni-Winch-S-Knowles-24/Cloud-Full-Stack-Implementation-Waqq.ly-App-BS3928-Cloud-Computing-and-Infrastructure-/blob/main/Waqq-ly-Logo.png?raw=true" style="width: 90px;"></a>
+        <!-- Search Tab -->
+        <a href="#search"><img src="https://github.com/Uni-Winch-S-Knowles-24/Cloud-Full-Stack-Implementation-Waqq.ly-App-BS3928-Cloud-Computing-and-Infrastructure-/blob/main/magnifying-glass-icon.png?raw=true" style="width: 29px; vertical-align: top;"><b> Search for Walkers</b></a>
+        <div class="navbarright">
+            <!-- Login Tab -->
+            <a href="#login"><img src="https://github.com/Uni-Winch-S-Knowles-24/Cloud-Full-Stack-Implementation-Waqq.ly-App-BS3928-Cloud-Computing-and-Infrastructure-/blob/main/space-making-icon.png?raw=true" style="width: 30px; vertical-align: top;"><b>Login</b><img src="https://github.com/Uni-Winch-S-Knowles-24/Cloud-Full-Stack-Implementation-Waqq.ly-App-BS3928-Cloud-Computing-and-Infrastructure-/blob/main/space-making-icon.png?raw=true" style="width: 30px; vertical-align: top;"></a>
+            <!-- Sign Up Tab -->
+            <a href="#signup"><img src="https://github.com/Uni-Winch-S-Knowles-24/Cloud-Full-Stack-Implementation-Waqq.ly-App-BS3928-Cloud-Computing-and-Infrastructure-/blob/main/space-making-icon.png?raw=true" style="width: 30px; vertical-align: top;"><b>Sign Up Dog</b></a>
+            <!-- Register as Walker Tab -->
+            <a href="#regwalker"><img src="https://github.com/Uni-Winch-S-Knowles-24/Cloud-Full-Stack-Implementation-Waqq.ly-App-BS3928-Cloud-Computing-and-Infrastructure-/blob/main/Walker-icon.png?raw=true" style="width: 50px; vertical-align: top;"><b>Become a Walker</b></a>
+        </div>
+    </div>
+
+    <!-- Elements Under Navigation Bar -->
+    <div class="main">
+
+        <!-- Header Section -->
+        <!-- -------------- -->
+        <header>
+            <!-- Title -->
+            <h1 style="font-size: 100px; padding: 205px 0px 205px 0px; margin: 0px;"><mark style="background: rgba(255, 255, 255, 0.6); border-radius: 20px; padding: 20px;">Waqq.ly</mark></h1>
+        </header>
+
+        <!-- Welcome Section -->
+        <!-- -------------- -->
+        <article>
+            <!-- Section Title -->
+            <h2 style="text-align: center; padding: 20px; font-size: 30px; margin: 0px; background: #5cace2; box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7); position: relative; z-index: 20;">Welcome to Waqq.ly</h2>
+            <!-- Section Text -->
+            <p style="font-size: 16; text-align: center; margin: 0 auto; max-width: 1000px; padding: 5px 152px 5px 152px; background: white;"><br />At Waqq.ly, we know your furry friend deserves the best care and attention.<br /><br />That's why we've created a platform where dog owners can easily find and connect with trusted local dog walkers. Whether you need a regular walker or just someone for those busy days, Waqq.ly is here to help.<br /><br />Sign up to register your dog today and start your search for the perfect match.<br /><br />With Waqq.ly, happy tails are just a few clicks away!<br /><br /></p>
+        </article>
+
+        <!-- How it Works Section -->
+        <!-- -------------------- -->
+        <article>
+            <!-- Section Divider -->
+            <p style="margin: 2px;"></p>
+            <!-- Section Title -->
+            <h2 style="text-align: center; padding: 20px; font-size: 30px; margin: 0px; background: white;">How Waqq.ly Works</h2>
+            <!-- Section Text -->
+            <ul style="background: white; margin: 0px;">
+                <!-- Finding Walker -->
+                <div Class="howitworks">
+                    <h3>Find a Walker</h3>
+                    <p>Search and find one of our<br />verified local walkers.</p>
+                </div>
+                <!-- Meeting Walker -->
+                <div Class="howitworks">
+                    <h3>Arrange a Meeting</h3>
+                    <p>Schedule a meeting to get to know your walker<br />and communicate your dogs walking needs.</p>
+                </div>
+                <!-- Booking Walker -->
+                <div Class="howitworks">
+                    <h3>Book a Walk</h3>
+                    <p>Using our online booking system,<br />schedule your dog for their walk.</p>
+                </div>
+            </ul>
+        </article>
+
+        <!-- Happiness Section -->
+        <!-- ----------------- -->
+        <article>
+            <!-- Section Divider -->
+            <p style="margin: 2px;"></p>
+            <!-- Section Title -->
+            <h2 style="text-align: center; padding: 20px; font-size: 30px; margin: 0px; background: white;">Why Choose Waqq.ly</h2>
+            <!-- Section Text -->
+            <ul style="background: white; margin: 0px;">
+                <!-- Personalisation -->
+                <div Class="happiness">
+                    <h3>Personalisation</h3>
+                    <p>Our walkers will personalise your dogs walk to their needs and<br />our booking system provides a flexible cancellation policy<br />in case your plans  change.</p>
+                </div>
+                <!-- Community -->
+                <div Class="happiness">
+                    <h3>Community</h3>
+                    <p>Our walkers are local pet lovers vetted<br />and verifies by our expert pet care and<br />safety team.</p>
+                </div>
+        </article>
+
+        <!-- Review Section -->
+        <!-- ----------------- -->
+        <article>
+            <!-- Section Title -->
+            <h2 style="text-align: center; padding: 20px; font-size: 30px; margin: 0px; background: #5cace2; box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7); position: relative; z-index: 20;">Reviews</h2>
+            <!-- Review 1 -->
+            <img src="https://github.com/Uni-Winch-S-Knowles-24/Cloud-Full-Stack-Implementation-Waqq.ly-App-BS3928-Cloud-Computing-and-Infrastructure-/blob/main/Review-two.png?raw=true" class="center" style="width: 90%; height: 30%; padding: 20px 65px 10px 65px; background: white;">
+            <!-- Section Divider -->
+            <p style="margin: 2px;"></p>
+            <!-- Review 2 -->
+            <img src="https://github.com/Uni-Winch-S-Knowles-24/Cloud-Full-Stack-Implementation-Waqq.ly-App-BS3928-Cloud-Computing-and-Infrastructure-/blob/main/Review-three.png?raw=true" class="center" style="width: 90%; height: 30%; padding: 20px 65px 10px 65px; background: white;">
+            <!-- Section Divider -->
+            <p style="margin: 2px;"></p>
+            <!-- Review 3 -->
+            <img src="https://github.com/Uni-Winch-S-Knowles-24/Cloud-Full-Stack-Implementation-Waqq.ly-App-BS3928-Cloud-Computing-and-Infrastructure-/blob/main/review-one.png?raw=true" class="center" style="width: 90%; height: 30%; padding: 20px 65px 10px 65px; background: white;">
+        </article>
+    </div>
+
+    <script>
+    </script>
+
+</body>
+</html>

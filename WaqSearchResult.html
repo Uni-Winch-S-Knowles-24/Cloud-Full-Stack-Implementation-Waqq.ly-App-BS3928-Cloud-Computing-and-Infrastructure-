@@ -1,0 +1,352 @@
+﻿<!DOCTYPE html>
+<!-- Wagg.ly Search Page -->
+<!-- ################# -->
+
+<html>
+<head>
+    <title>Waqq.ly</title>
+
+    <script type="text/javascript" src="SearchAPI.js">
+    </script>
+
+    <!-- Styling Features -->
+    <!-- ================ -->
+    <style>
+
+        /* Styling Whole Website */
+        /* ---------------------- */
+        body {
+            background: black;
+        }
+
+        /* Styling Top Bar */
+        /* --------------- */
+        .topbar {
+            position: fixed; /* Sets Top bar to a fixed position */
+            top: 0; /* Sets Top bar position to the top of the page */
+            width: 100%; /* Sets Top bar to full width of page */
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5); /* Creates shadow under */
+            z-index: 30; /* Specifying layer */
+        }
+
+        .navbar {
+            overflow: hidden; /* makes background show while elements are floating */
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5); /* Creates shadow under*/
+            position: relative; /* Making navigation shadow above search bar */
+        }
+
+            .navbar a {
+                float: left; /* Positions left tabs on navigation bar */
+                color: black; /* Sets navigation bar text color */
+                padding: 6px 16px; /* Gaps navigation bar tabs */
+                text-decoration: none; /* Removes navigation bar tabs' underline */
+            }
+
+        .navbarright a {
+            float: right; /* Positions right tabs on navigation bar */
+        }
+
+        .navbar a:hover {
+            background: rgba(255, 255, 255, 0.5); /* Changing navigation tab colour when mouse hovers over */
+        }
+
+        .searchelements {
+            display: inline-block; /* Positions elements in line */
+        }
+
+        .main {
+            margin-top: 105px; /* Adds top margin to avoid content overlay */
+        }
+
+        /* Styling Walkers */
+        /* --------------- */
+        .profile {
+            display: inline-block;
+            margin: 0px 40px 0px 40px;
+        }
+
+        .walkersdetails {
+            display: inline-block;
+            text-align: left;
+        }
+
+        h2 {
+            font-size: 20px;
+            margin: 5px 0px 5px 0px;
+        }
+
+        p {
+            font-size: 15px;
+            margin: 5px;
+        }
+    </style>
+</head>
+
+    <!-- Website Elements -->
+    <!-- ================ -->
+    <body>
+
+        <!-- Top Bar -->
+        <!-- -------------- -->
+        <div class="topbar">
+            <!-- Navigation Bar -->
+            <div class="navbar" style="background: #21ef59;">
+                <!-- Home Tab -->
+                <a href="WaqHome.html"><img src="https://github.com/Uni-Winch-S-Knowles-24/Cloud-Full-Stack-Implementation-Waqq.ly-App-BS3928-Cloud-Computing-and-Infrastructure-/blob/main/Waqq-ly-Logo.png?raw=true" style="width: 90px;"></a>
+                <!-- Search Tab -->
+                <a href="#search" style="background: rgba(255, 255, 255, 0.5);"><img src="https://github.com/Uni-Winch-S-Knowles-24/Cloud-Full-Stack-Implementation-Waqq.ly-App-BS3928-Cloud-Computing-and-Infrastructure-/blob/main/magnifying-glass-icon.png?raw=true" style="width: 29px; vertical-align: top;"><b> Search for Walkers</b></a>
+                <div class="navbarright">
+                    <!-- Login Tab -->
+                    <a href="WaqLogin.html"><img src="https://github.com/Uni-Winch-S-Knowles-24/Cloud-Full-Stack-Implementation-Waqq.ly-App-BS3928-Cloud-Computing-and-Infrastructure-/blob/main/space-making-icon.png?raw=true" style="width: 30px; vertical-align: top;"><b>Login</b><img src="https://github.com/Uni-Winch-S-Knowles-24/Cloud-Full-Stack-Implementation-Waqq.ly-App-BS3928-Cloud-Computing-and-Infrastructure-/blob/main/space-making-icon.png?raw=true" style="width: 30px; vertical-align: top;"></a>
+                    <!-- Sign Up Tab -->
+                    <a href="WaqSignUp.html"><img src="https://github.com/Uni-Winch-S-Knowles-24/Cloud-Full-Stack-Implementation-Waqq.ly-App-BS3928-Cloud-Computing-and-Infrastructure-/blob/main/space-making-icon.png?raw=true" style="width: 30px; vertical-align: top;"><b>Sign Up Dog</b></a>
+                    <!-- Register as Walker Tab -->
+                    <a href="WaqReg.html"><img src="https://github.com/Uni-Winch-S-Knowles-24/Cloud-Full-Stack-Implementation-Waqq.ly-App-BS3928-Cloud-Computing-and-Infrastructure-/blob/main/Walker-icon.png?raw=true" style="width: 50px; vertical-align: top;"><b>Become a Walker</b></a>
+                </div>
+            </div>
+            <!-- Search Bar -->
+            <div class="searchbar" style="background: #5cace2">
+                <!-- Input Address -->
+                <div class="searchelements">
+                    <label for="address" Style="padding: 10px 30px 10px 30px;"><b>Your Location:</b></label>
+                    <input type="text" placeholder="Enter Your Postcode:" id="address" Style="padding: 10px 30px 10px 30px; text-align: center;">
+                </div>
+                <!-- Search Button -->
+                <div class="searchelements">
+                    <button onclick="searchButton()" style="padding: 10px 30px 10px 20px; box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7); margin: 10px; border-radius: 10px;"><b>Search</b></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Elements Under Navigation Bar -->
+        <div class="main">
+
+            <!-- Walker 1 -->
+            <!-- -------- -->
+            <article>
+                <div class="walker1" style="background: white; text-align: center;">
+                    <!-- Name -->
+                    <h1 id="name1" style="font-size: 30px; margin: 0;"><br /></h1>
+                    <div style="margin: 0;">
+                        <!-- walkers details -->
+                        <div class="profile">
+                            <h2>Walker's Details:</h2>
+                            <div class="walkersdetails">
+                                <p>Price Per Walk:</p>
+                                <p>Walkers Postcode:</p>
+                            </div>
+                            <div class="walkersdetails">
+                                <p id="price1"></p>
+                                <p id="postcode1"></p>
+                            </div>
+                        </div>
+                        <!-- Times Available -->
+                        <div class="profile">
+                            <h2>Times Available:</h2>
+                            <div class="walkersdetails">
+                                <p>Weekdays:</p>
+                                <p>Weekends:</p>
+                            </div>
+                            <div class="walkersdetails">
+                                <p id="wday1"></p>
+                                <p id="wend1"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <button onclick="alert('The Walker has been informed of your interest.')" style="padding: 10px 30px 10px 20px; box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7); margin: 10px; border-radius: 10px; background: #21ef59;"><b>Register Interest</b></button>
+                </div>
+            </article>
+          
+        <!-- Section Divider -->
+        <p style="margin: 2px;"></p>
+
+        <!-- Walker 2 -->
+        <!-- -------- -->
+        <article>
+            <div class="walker2" style="background: white; text-align: center;">
+                <!-- Name -->
+                <h1 id="name2" style="font-size: 30px; margin: 0;"><br /></h1>
+                <div style="margin: 0;">
+                    <!-- walkers details -->
+                    <div class="profile">
+                        <h2>Walker's Details:</h2>
+                        <div class="walkersdetails">
+                            <p>Price Per Walk:</p>
+                            <p>Walkers Postcode:</p>
+                        </div>
+                        <div class="walkersdetails">
+                            <p id="price2"></p>
+                            <p id="postcode2"></p>
+                        </div>
+                    </div>
+                    <!-- Times Available -->
+                    <div class="profile">
+                        <h2>Times Available:</h2>
+                        <div class="walkersdetails">
+                            <p>Weekdays:</p>
+                            <p>Weekends:</p>
+                        </div>
+                        <div class="walkersdetails">
+                            <p id="wday2"></p>
+                            <p id="wend2"></p>
+                        </div>
+                    </div>
+                </div>
+                <button onclick="alert('The Walker has been informed of your interest.')" style="padding: 10px 30px 10px 20px; box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7); margin: 10px; border-radius: 10px; background: #21ef59;"><b>Register Interest</b></button>
+            </div>
+        </article>
+
+        <!-- Section Divider -->
+        <p style="margin: 2px;"></p>
+
+        <!-- Walker 3 -->
+        <!-- -------- -->
+        <article>
+            <div class="walker3" style="background: white; text-align: center;">
+                <!-- Name -->
+                <h1 id="name3" style="font-size: 30px; margin: 0;"><br /></h1>
+                <div style="margin: 0;">
+                    <!-- walkers details -->
+                    <div class="profile">
+                        <h2>Walker's Details:</h2>
+                        <div class="walkersdetails">
+                            <p>Price Per Walk:</p>
+                            <p>Walkers Postcode:</p>
+                        </div>
+                        <div class="walkersdetails">
+                            <p id="price3"></p>
+                            <p id="postcode3"></p>
+                        </div>
+                    </div>
+                    <!-- Times Available -->
+                    <div class="profile">
+                        <h2>Times Available:</h2>
+                        <div class="walkersdetails">
+                            <p>Weekdays:</p>
+                            <p>Weekends:</p>
+                        </div>
+                        <div class="walkersdetails">
+                            <p id="wday3"></p>
+                            <p id="wend3"></p>
+                        </div>
+                    </div>
+                </div>
+                <button onclick="alert('The Walker has been informed of your interest.')" style="padding: 10px 30px 10px 20px; box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7); margin: 10px; border-radius: 10px; background: #21ef59;"><b>Register Interest</b></button>
+            </div>
+        </article>
+
+        <!-- Section Divider -->
+        <p style="margin: 2px;"></p>
+
+        <!-- Walker 4 -->
+        <!-- -------- -->
+        <article>
+            <div class="walker4" style="background: white; text-align: center;">
+                <!-- Name -->
+                <h1 id="name4" style="font-size: 30px; margin: 0;"><br /></h1>
+                <div style="margin: 0;">
+                    <!-- walkers details -->
+                    <div class="profile">
+                        <h2>Walker's Details:</h2>
+                        <div class="walkersdetails">
+                            <p>Price Per Walk:</p>
+                            <p>Walkers Postcode:</p>
+                        </div>
+                        <div class="walkersdetails">
+                            <p id="price4"></p>
+                            <p id="postcode4"></p>
+                        </div>
+                    </div>
+                    <!-- Times Available -->
+                    <div class="profile">
+                        <h2>Times Available:</h2>
+                        <div class="walkersdetails">
+                            <p>Weekdays:</p>
+                            <p>Weekends:</p>
+                        </div>
+                        <div class="walkersdetails">
+                            <p id="wday4"></p>
+                            <p id="wend4"></p>
+                        </div>
+                    </div>
+                </div>
+                <button onclick="alert('The Walker has been informed of your interest.')" style="padding: 10px 30px 10px 20px; box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7); margin: 10px; border-radius: 10px; background: #21ef59;"><b>Register Interest</b></button>
+            </div>
+        </article>
+
+        <!-- Section Divider -->
+        <p style="margin: 2px;"></p>
+
+        <!-- Walker 5 -->
+        <!-- -------- -->
+        <article>
+            <div class="walker5" style="background: white; text-align: center;">
+                <!-- Name -->
+                <h1 id="name5" style="font-size: 30px; margin: 0;"><br /></h1>
+                <div style="margin: 0;">
+                    <!-- walkers details -->
+                    <div class="profile">
+                        <h2>Walker's Details:</h2>
+                        <div class="walkersdetails">
+                            <p>Price Per Walk:</p>
+                            <p>Walkers Postcode:</p>
+                        </div>
+                        <div class="walkersdetails">
+                            <p id="price5"></p>
+                            <p id="postcode5"></p>
+                        </div>
+                    </div>
+                    <!-- Times Available -->
+                    <div class="profile">
+                        <h2>Times Available:</h2>
+                        <div class="walkersdetails">
+                            <p>Weekdays:</p>
+                            <p>Weekends:</p>
+                        </div>
+                        <div class="walkersdetails">
+                            <p id="wday5"></p>
+                            <p id="wend5"></p>
+                        </div>
+                    </div>
+                </div>
+                <button onclick="alert('The Walker has been informed of your interest.')" style="padding: 10px 30px 10px 20px; box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7); margin: 10px; border-radius: 10px; background: #21ef59;"><b>Register Interest</b></button>
+            </div>
+        </article>
+        
+        </div>
+
+        <script>
+            document.getElementById('name1').innerHTML = name1;
+            document.getElementById('postcode1').innerHTML = postcode1;
+            document.getElementById('price1').innerHTML = price1;
+            document.getElementById('wday1').innerHTML = wday1;
+            document.getElementById('wend1').innerHTML = wend1;
+
+
+            document.getElementById('name2').innerHTML = name2;
+            document.getElementById('postcode2').innerHTML = postcode2;
+            document.getElementById('price2').innerHTML = price2;
+            document.getElementById('wday2').innerHTML = wday2;
+            document.getElementById('wend2').innerHTML = wend2;
+
+            document.getElementById('name3').innerHTML = name3;
+            document.getElementById('postcode3').innerHTML = postcode3;
+            document.getElementById('price3').innerHTML = price3;
+            document.getElementById('wday3').innerHTML = wday3;
+            document.getElementById('wend3').innerHTML = wend3;
+
+            document.getElementById('name4').innerHTML = name4;
+            document.getElementById('postcode4').innerHTML = postcode4;
+            document.getElementById('price4').innerHTML = price4;
+            document.getElementById('wday4').innerHTML = wday4;
+            document.getElementById('wend4').innerHTML = wend4;
+
+            document.getElementById('name5').innerHTML = name5;
+            document.getElementById('postcode5').innerHTML = postcode5;
+            document.getElementById('price5').innerHTML = price5;
+            document.getElementById('wday5').innerHTML = wday5;
+            document.getElementById('wend5').innerHTML = wend5;
+        </script>
+
+    </body>
+</html>

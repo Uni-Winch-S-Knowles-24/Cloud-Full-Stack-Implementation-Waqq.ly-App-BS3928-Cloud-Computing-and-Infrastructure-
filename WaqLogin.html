@@ -1,0 +1,133 @@
+﻿<!DOCTYPE html>
+<!-- Wagg.ly Login Page -->
+<!-- ################# -->
+
+<html>
+
+<head>
+
+    <title>Waqq.ly</title>
+
+    <!-- Styling Features -->
+    <!-- ================ -->
+    <style>
+
+        /* Styling Whole Website */
+        /* ---------------------- */
+        body {
+            background: black;
+        }
+
+        /* Styling Navigation Bar */
+        /* ---------------------- */
+        .navbar {
+            position: fixed; /* Sets Navigation bar to a fixed position */
+            top: 0; /* Sets Navigation bar position to the top of the page */
+            width: 100%; /* Sets Navigation bar to full width of page */
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5); /* Creates shadow under*/
+            z-index: 30; /* Specifying layer */
+        }
+
+            .navbar a {
+                float: left; /* Positions left tabs on navigation bar */
+                color: black; /* Sets navigation bar text color */
+                padding: 6px 16px; /* Gaps navigation bar tabs */
+                text-decoration: none; /* Removes navigation bar tabs' underline */
+            }
+
+        .navbarright a {
+            float: right; /* Positions right tabs on navigation bar */
+        }
+
+        .navbar a:hover {
+            background: rgba(255, 255, 255, 0.5); /* Changing navigation tab colour when mouse hovers over */
+        }
+
+        .main {
+            margin-top: 32px; /* Adds top margin to avoid content overlay */
+        }
+
+        /* Styling Header Section */
+        /* ---------------------- */
+        header {
+            text-align: center; /* Positioning text in center */
+            background-image: url("https://github.com/Uni-Winch-S-Knowles-24/Cloud-Full-Stack-Implementation-Waqq.ly-App-BS3928-Cloud-Computing-and-Infrastructure-/blob/main/Waqq-ly-Cover-Header-Image.jpg?raw=true"); /* Adding background image*/
+            background-size: 100%; /* Adjusiting background size */
+            background-repeat: no-repeat; /* stoping background image from repeating */
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+            z-index: 20;
+            position: relative;
+        }
+
+        /* Login Section */
+        /* ------------------- */
+        .login {
+            background: white;
+            text-align: center;
+            Padding: 50px 0px 0px 0px;
+            margin-top: -30px;
+        }
+
+        .loginbutton {
+            background: white;
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+    <!-- Website Elements -->
+    <!-- ================ -->
+    <body>
+
+        <!-- Navigation Bar -->
+        <!-- -------------- -->
+        <div class="navbar" style="background: #21ef59;">
+            <!-- Home Tab -->
+            <a href="WaqHome.html"><img src="https://github.com/Uni-Winch-S-Knowles-24/Cloud-Full-Stack-Implementation-Waqq.ly-App-BS3928-Cloud-Computing-and-Infrastructure-/blob/main/Waqq-ly-Logo.png?raw=true" style="width: 90px;"></a>
+            <!-- Search Tab -->
+            <a href="WaqSearch.html"><img src="https://github.com/Uni-Winch-S-Knowles-24/Cloud-Full-Stack-Implementation-Waqq.ly-App-BS3928-Cloud-Computing-and-Infrastructure-/blob/main/magnifying-glass-icon.png?raw=true" style="width: 29px; vertical-align: top;"><b> Search for Walkers</b></a>
+            <div class="navbarright">
+                <!-- Login Tab -->
+                <a href="#login" style="background: rgba(255, 255, 255, 0.5);"><img src="https://github.com/Uni-Winch-S-Knowles-24/Cloud-Full-Stack-Implementation-Waqq.ly-App-BS3928-Cloud-Computing-and-Infrastructure-/blob/main/space-making-icon.png?raw=true" style="width: 30px; vertical-align: top;"><b>Login</b><img src="https://github.com/Uni-Winch-S-Knowles-24/Cloud-Full-Stack-Implementation-Waqq.ly-App-BS3928-Cloud-Computing-and-Infrastructure-/blob/main/space-making-icon.png?raw=true" style="width: 30px; vertical-align: top;"></a>
+                <!-- Sign Up Tab -->
+                <a href="WaqSignUp.html"><img src="https://github.com/Uni-Winch-S-Knowles-24/Cloud-Full-Stack-Implementation-Waqq.ly-App-BS3928-Cloud-Computing-and-Infrastructure-/blob/main/space-making-icon.png?raw=true" style="width: 30px; vertical-align: top;"><b>Sign Up Dog</b></a>
+                <!-- Register as Walker Tab -->
+                <a href="WaqReg.html"><img src="https://github.com/Uni-Winch-S-Knowles-24/Cloud-Full-Stack-Implementation-Waqq.ly-App-BS3928-Cloud-Computing-and-Infrastructure-/blob/main/Walker-icon.png?raw=true" style="width: 50px; vertical-align: top;"><b>Become a Walker</b></a>
+            </div>
+        </div>
+
+        <!-- Elements Under Navigation Bar -->
+        <div class="main">
+
+            <!-- Header Section -->
+            <!-- -------------- -->
+            <header>
+                <!-- Title -->
+                <h1 style="font-size: 100px; padding: 300px 0px 300px 0px; margin: 0px;"><mark style="background: rgba(255, 255, 255, 0.6); border-radius: 20px; padding: 20px;">Login</mark></h1>
+            </header>
+
+            <!-- Login Section -->
+            <!-- -------------- -->
+            <article>
+                <div class="login">
+                    <!-- Email -->
+                    <label for="email" style="padding: 10px 124px 10px 50px;"><b>Enter Your Email:</b></label>
+                    <input type="email" placeholder="Email" id="email" Style="padding: 10px 30px 10px 30px; text-align: center;"><br />
+                    <!-- Password -->
+                    <label for="password" style="padding: 10px 100px 10px 50px;"><b>Enter Your Password:</b></label>
+                    <input type="password" placeholder="Password" id="password" Style="padding: 10px 30px 10px 30px; text-align: center;"><br />
+                </div>
+                <!-- Login Button -->
+                <div class="loginbutton">
+                    <button onclick="alert('Logged In!')" style="padding: 10px 30px 10px 20px; box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7); margin: 10px; border-radius: 10px; background: #21ef59; font-size: 30px;"><b>Login</b></button>
+                </div>
+            </article>
+        </div>
+
+        <script>
+
+        </script>
+
+    </body>
+</html>
